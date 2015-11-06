@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">
+        <link rel="stylesheet" media="screen" type="text/css" href="media/index.css">
+    </head>
+    <body>
+        
+        <div class="container-fluid">
+            <div class="panel">
+                <div class="header">
+                    <h1>TOP 5 - US</h1>
+                    <h2>by Artist</h2>
+                </div>
+                <div class="footer">
+                    <small>Made with <i id="heart"></i> by Gaby</small>
+                </div>
+            </div>
+
+            <div class="top-track-lightbox">
+                <div id="lightbox" class="darken"></div>
+
+                <div class="content">
+                    <div id="artist-search">
+
+                        <div class="inner-addon ">
+                            <i class="glyphicon glyphicon-search"></i>
+                            <input type="text" class="form-control" placeholder="Search for an artist.." id="find-artist"/>
+                            <p id="message"></p>
+                        </div>
+
+                        <div id="artists-container" class="hide"></div>
+                    </div>
+
+                    <div class="cassette-wrap fade-in" id="cassette-wrap">
+                        <a id="cassette-close"></a>
+                        <div id="cassette" class="cassette-bg-lg cassette-bg-md">
+                            <div id="rewind" move=""></div>
+                            <div class="top5">
+                                <div class="top5-thumb">
+                                    <img id="preview-artist" class="artist-thumb-preview" src="" alt="" />
+                                </div>
+                                <div class="top5-info">
+                                    <div><b>Top Tracks</b></div><br />
+                                    <div id="top5-artist-list">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="forward" move=""></div>
+                        </div>
+                        <div class="cassette-title">
+                            <span id="artist-name">Lupines (Kiddi Einars)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel-footer">
+                <div class="footer">
+                    <small>Made with <i id="heart"></i> by Gaby</small>
+                </div>
+            </div>
+            
+        </div>
+        
+        <script type="text/javascript" src="media/lightbox.js"></script>
+    </body>
+</html>

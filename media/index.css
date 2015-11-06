@@ -1,0 +1,402 @@
+/*General*/
+body{
+    margin: 0;
+}
+.container-fluid{
+    margin: 0;
+    padding: 0;
+}
+.content, .panel, .top-track-lightbox{
+    position: relative;
+}
+.hide{
+    visibility: hidden;
+}
+.show{
+    visibility: visible;
+}
+.top-track-lightbox{   
+    display: inline-block;
+}
+
+/*Panel*/
+.panel{
+    background-color: #7B567A;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    margin-bottom: 0px; 
+}
+.panel .header{
+    position: relative;
+}
+.panel .footer{
+    position: fixed;
+    bottom: 20px;
+    text-align: center;
+}
+.panel small{
+    width: 160px;
+    display: block;
+}
+#heart { display: inline-block; position: relative; width: 15px; height: 10px; } #heart:before, #heart:after { position: absolute; content: ""; left: 8px; top: 0; width: 8px; height: 13px; background: white; -moz-border-radius: 10px 10px 0 0; border-radius: 10px 10px 0 0; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); -webkit-transform-origin: 0 100%; -moz-transform-origin: 0 100%; -ms-transform-origin: 0 100%; -o-transform-origin: 0 100%; transform-origin: 0 100%; } #heart:after { left: 0; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); -webkit-transform-origin: 100% 100%; -moz-transform-origin: 100% 100%; -ms-transform-origin: 100% 100%; -o-transform-origin: 100% 100%; transform-origin :100% 100%; }
+
+/*Search Bar*/
+#artist-search{
+    top: 40px;
+    position: relative;
+}
+.inner-addon {
+    position: relative;
+    width: 50%;
+    left: 23%;
+}
+.inner-addon input {
+    padding-left: 30px;    
+}
+.inner-addon i {
+    position: absolute;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+
+/*Cassette*/
+.cassette-wrap{
+    border-width: 10px;
+    position: absolute;
+    top: 30px;
+    background-color: white;
+    display: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+#cassette-close{
+    position: absolute;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background: transparent url("../images/close.png");
+    cursor: pointer;
+    z-index: 1103;
+    top: -10px;
+}
+#cassette{
+    position: relative;
+    left: 15px;
+    top: 20px;
+}
+.cassette-title{
+    bottom: 0;
+    margin-bottom: -35px;
+    position: absolute;
+    right: 50%;
+    text-align: center;
+    z-index: 8050;
+}
+.cassette-title span {
+    background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+    border-radius: 15px;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 24px;
+    margin-right: -100%;
+    padding: 2px 20px;
+    text-shadow: 0 1px 2px #222;
+    white-space: nowrap;
+}
+.artist-thumb-preview{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+/*Lightbox*/
+#lightbox{
+    height: 100vh;
+    width: 100%;
+    display: block; 
+    background-color: rgb(119, 119, 119);
+    position: absolute;
+    display: none;
+}
+@-webkit-keyframes darken {
+    to {
+        opacity: 0.7;
+    }
+}
+@-webkit-keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+@keyframes darken {
+    to {
+        opacity: 0.7;
+    }
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+.darken{
+    -webkit-animation: darken .3s ease-in 0.7 forwards;
+    animation: darken .3s ease-in 0.7 forwards;
+    opacity: 0;
+}
+.fade-in{
+    -webkit-animation: fadeIn 0.7s ease-in 1 forwards;
+    animation: fadeIn 0.7s ease-in 1 forwards;
+    opacity: 0;
+}
+
+/*Top 5 tracks*/
+.top5{
+    position: relative;
+    height: 110px;
+    display: inline-block;
+}
+.top5-info{
+    display: inline-block;
+    vertical-align: top;
+}
+.top5-info ol{
+    margin-top: -18px;
+}
+#top5-artist-list{
+    font-size: 12px;
+}
+.top5-thumb, #top5-artist-name{
+    display: inline-block;
+}
+
+/*List of artists container*/
+#artists-container{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 100%;
+    padding-left: 50px;
+    top: 30px;
+}
+#artists-container span{
+    display: inline-block;
+    width: 150px;
+}
+#artists-container label{
+    display: table-cell;
+}
+.artist-thumb{
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/*Cassette controls*/
+#rewind{
+    position: relative;
+    display: inline-block;
+    background: transparent none repeat scroll 0 0;
+    border-color: transparent black transparent transparent;
+    border-image: none;
+    border-style: solid;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+#forward{
+    position: relative;
+    display: inline-block;
+    background: transparent none repeat scroll 0 0;
+    border-color: transparent transparent transparent black;
+    border-image: none;
+    border-style: solid;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+#forward:hover,  #rewind:hover{
+    opacity: 0.7;
+}
+
+/*Responsive*/
+/*Laptops*/
+@media (min-width: 1200px) { 
+    /*General*/
+    .top-track-lightbox{   
+        width: 80%;
+    }
+    /*Panel*/
+    .panel{
+        width: 20%;
+        height: 100vh;
+        float: left;
+    }
+    .panel .header{
+        top: 45%;
+        -webkit-transform: translateY(-45%);
+        -ms-transform: translateY(-45%);
+        transform: translateY(-45%);
+    }
+    .panel-footer{
+        display: none;
+    }
+    /*Cassette*/
+    .cassette-wrap{
+        height: 425px;
+        width: 630px;
+        left: 20%;
+    }
+    .cassette-bg-lg{
+        height: 385px;
+        width: 600px;
+        background: url("../images/cassette-lg.png") no-repeat;
+    }
+    /*Cassette controls*/
+    #rewind{
+        border-width: 30px 40px;
+        left: 20px;
+        top: 165px;
+    }
+    #forward{
+        border-width: 30px 40px;
+        top: 50px;
+        left: 500px;
+    }
+    /*Top 5 tracks*/
+    .top5{
+        width: 440px;
+        top: 35px;
+        left: 5px;
+    }
+    .top5-info{
+        width: 335px;
+        text-overflow: clip;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+/*Tablets*/
+@media (min-width:700px) and (max-width:1199px) {
+    /*General*/
+    .top-track-lightbox{   
+        width: 80%;
+    }
+    /*Panel*/
+    .panel{
+        width: 20%;
+        height: 100vh;
+        float: left;
+    }
+    .panel .header{
+        top: 45%;
+        -webkit-transform: translateY(-45%);
+        -ms-transform: translateY(-45%);
+        transform: translateY(-45%);
+    }
+    .panel-footer{
+        display: none;
+    }
+    /*Cassette*/
+    .cassette-wrap{
+        height: 378px;
+        width: 507px;
+        left: 9%;
+    }
+    .cassette-bg-md{
+        height: 338px;
+        width: 477px;
+        background: url("../images/cassette-md.png") no-repeat;
+    }
+    /*Cassette controls*/
+    #rewind{
+        border-width: 20px 25px;
+        left: 23px;
+        top: 175px;
+    }
+    #forward{
+        border-width: 20px 25px;
+        top: 175px;
+        left: 5px;
+    }
+    /*Top 5 tracks*/
+    .top5{
+        width: 340px;
+        top: 45px;
+        left: 25px;
+    }
+    .top5-info{
+        width: 235px;
+        text-overflow: clip;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+/*Phones*/
+/* Portrait and Landscape */
+@media (min-width:300px) and (max-width:699px) {
+    /*General*/
+    .top-track-lightbox{   
+        width: 100%;
+        height: 74vh;
+    }
+    /*Panel*/
+    .panel{
+        width: 100%;
+    }
+    .panel .header{
+        top: 0;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+    .panel .footer{
+        display: none;
+    }
+    .panel-footer{
+        background-color: #7B567A;
+        display: inline-block;
+        text-align: center;
+        color: white;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+    /*Cassette*/
+    .cassette-wrap{
+        height: 283px;
+        width: 357px;
+        left: 5%;
+    }
+    .cassette-bg-md{
+        height: 243px;
+        width: 327px;
+        background: url("../images/cassette-sm.png") no-repeat;
+    }
+    /*Cassette controls*/
+    #rewind{
+        border-width: 15px 15px;
+        left: 0px;
+        top: 150px;
+    }
+    #forward{
+        border-width: 15px 15px;
+        top: 65px;
+        left: 287px;
+    }
+    /*Top 5 tracks*/
+    .top5{
+        width: 280px;
+        top: 30px;
+        left: -10px;
+    }
+    .top5-info{
+        width: 175px;
+        text-overflow: clip;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
