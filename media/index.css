@@ -45,6 +45,7 @@ body{
 #artist-search{
     top: 40px;
     position: relative;
+    margin-bottom: 130px;
 }
 .inner-addon {
     position: relative;
@@ -340,7 +341,7 @@ body{
     /*General*/
     .top-track-lightbox{   
         width: 100%;
-        height: 74vh;
+        height: 100%;
     }
     /*Panel*/
     .panel{
