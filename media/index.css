@@ -336,7 +336,7 @@ body{
 
 /*Phones*/
 /* Portrait and Landscape */
-@media (min-width:300px) and (max-width:699px) {
+@media (min-width:0px) and (max-width:699px) {
     /*General*/
     .top-track-lightbox{   
         width: 100%;
@@ -357,7 +357,7 @@ body{
     }
     .panel-footer{
         background-color: #7B567A;
-        display: inline-block;
+        display: block;
         text-align: center;
         color: white;
         width: 100%;
